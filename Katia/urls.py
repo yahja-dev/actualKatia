@@ -15,9 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import about_view
+from core.views import about_view, chatbot_view, team_view, predictions_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', about_view, name="about")
+    path('', about_view, name="about"),
+    path('katia/', chatbot_view, name="chatbot"),
+    path('team/', team_view, name='team'),
+    path('predictions/', predictions_view, name="predictions")
+
 ]
+
+
